@@ -79,9 +79,25 @@ Topic Input → Content Generation → Persona Segmentation → A/B Assignment �
 ## ▶️ Instructions to Run Locally
 
 > The app can run fully in mock mode without API keys.
+If you want to use real APIs, add the following to your .env file:
+OPENAI_API_KEY=your_key_here
+HUBSPOT_ACCESS_TOKEN=your_token_here
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/elinxxy1307-cloud/novamind-ai-marketing-content-pipeline.git
+cd novamind-ai-marketing-content-pipeline
+
+# 2. (Optional but recommended) Create a virtual environment
+python3 -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+# 3. Install dependencies
 pip install -r requirements.txt
+
+# 4. Set up environment variables
 cp .env.example .env
+
+# 5. Run the app
 streamlit run app.py
-```
+Open your browser and go to: http://localhost:8501
